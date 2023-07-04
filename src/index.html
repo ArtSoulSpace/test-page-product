@@ -1,62 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product page</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="wrapper center">
-        <header class="header">
-            <div class="header__logo"><img src="img/logo/LOGO.svg" alt=""></div>
-            <nav class="header__nav">
-                <button>Профиль</button>
-                <button>Избранное</button>
-                <button>Корзина</button>
-            </nav>
-        </header>
-        <div class="contant">
-            <div class="contant__left">
-                <img src="img/06.jpg" alt="Product">
+      <header class="header">
+        <div class="header__logo"><img src="img/logo/LOGO.svg" alt="" /></div>
+        <nav class="header__nav">
+          <a class="header__link" href="#"
+            ><img src="img/icon/person.svg" alt=""
+          /></a>
+          <a class="header__link" href="#"
+            ><img src="img/icon/favorite.svg" alt=""
+          /></a>
+          <a class="header__link" href="#"
+            ><img src="img/icon/bag.svg" alt=""
+          /></a>
+        </nav>
+      </header>
+      <div class="contant">
+        <div class="contant__left">
+          <img src="img/08.jpg" alt="Product" />
+          <div class="contant__carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item">
+                <img src="img/01.jpg" alt="Image 1" />
+              </div>
+              <div class="carousel-item">
+                <img src="img/02.jpg" alt="Image 2" />
+              </div>
+              <div class="carousel-item">
+                <img src="img/03.jpg" alt="Image 3" />
+              </div>
+              <div class="carousel-item">
+                <img src="img/04.jpg" alt="Image 4" />
+              </div>
+              <div class="carousel-item">
+                <img src="img/05.jpg" alt="Image 5" />
+              </div>
             </div>
-            <div class="contant__right">
-                <h2>Пижама для девочек</h2>
-                <p>Арт. 02765/46</p>
-                <div class="contant__comment">
-                    <p>Отзывы</p>
-                    <div class="contant__rating">
-                        <img src="img/icon/icon_star_fill.svg" alt="">
-                        <img src="img/icon/icon_star_fill.svg" alt="">
-                        <img src="img/icon/icon_star_fill.svg" alt="">
-                        <img src="img/icon/icon_star_fill.svg" alt="">
-                        <img src="img/icon/icon_star_fill.svg" alt="">
-                    </div>
-                    <p>14 отзывов</p>
-                    <img src="img/icon/arrow_next.svg" alt="">
-                </div>
-                <div class="content__price">
-                    <p>800 <span>1 500 ₽</span><img src="img/icon/arrow_next.svg" alt=""></p>
-                    <div class="content__stock">
-                        <div class="content__discount"><p>скидка -47%</p></div>
-                        <div class="content__discount"><p>акция -20%</p></div>
-                    </div>
-                </div>
-                <div class="contant__size">
-                    <select name="" id="">
-                        <option value="">Выбрать размер</option>
-                        <option value="">XXS</option>
-                        <option value="">XS</option>
-                        <option value="">S</option>
-                        <option value="">M</option>
-                        <option value="">L</option>
-                    </select>
-                    <a href="#">Определить размер</a>
-                </div>
-            </div>
+          </div>
         </div>
-        <div class="footer"></div>
+        <div class="contant__right">
+          <h1 class="contant__title">Пижама для девочек</h1>
+          <p class="contant__code">Арт. 02765/46</p>
+          <div class="contant__comment">
+            <p>Отзывы</p>
+            <div class="contant__rating">
+              <img src="img/icon/icon_star_fill.svg" alt="" />
+              <img src="img/icon/icon_star_fill.svg" alt="" />
+              <img src="img/icon/icon_star_fill.svg" alt="" />
+              <img src="img/icon/icon_star_fill.svg" alt="" />
+              <img src="img/icon/icon_star.svg" alt="" />
+            </div>
+            <p>14 отзывов</p>
+            <img src="img/icon/arrow_next.svg" alt="" />
+          </div>
+          <div class="content__price-box">
+            <p class="content__price">
+              800 ₽<del class="content__price_oldPrice">1 500 ₽</del>
+              <a href="#"><img src="img/icon/arrow_next.svg" alt="" /></a>
+            </p>
+
+            <div class="content__stock">
+              <div class="content__discount"><p>скидка -47%</p></div>
+              <div class="content__discount"><p>акция -20%</p></div>
+            </div>
+          </div>
+          <div class="contant__size-box">
+            <select class="contant__size" name="size" id="size">
+              <option value="">Выбрать размер</option>
+              <option value="XXS">XXS</option>
+              <option value="XS">XS</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+            </select>
+            <a class="size__link" href="#">Определить размер</a>
+            <form class="form" action="#">
+              <div class="contant__counter">
+                <input
+                  class="contant__input"
+                  type="button"
+                  value="+"
+                  onClick="change('amount',0,10, 1);"
+                />
+                <input
+                  class="contant__input contant__input_decor"
+                  id="amount"
+                  type="text"
+                  value="1"
+                />
+                <input
+                  class="contant__input"
+                  type="button"
+                  value="-"
+                  onClick="change('amount',0,10,-1);"
+                />
+              </div>
+              <div class="content__addToCart">
+                <button class="content__btn-cart">Добавить в корзину</button>
+                <button class="content__btn-favorite">
+                  <img src="img/icon/like_white.svg" alt="" />
+                </button>
+              </div>
+              <a class="content__buy-one-click" href="#">Купить в один клик</a>
+            </form>
+          </div>
+          <div class="content__description">
+            <div class="content__description_group">
+              <img src="img/icon/Closes.svg" alt="" />
+              <a href="#">Описание товара</a>
+            </div>
+            <div class="content__description_group">
+              <img src="img/icon/clock.svg" alt="" />
+              <a href="#">Доставка и возврат</a>
+            </div>
+            <div class="content__description_group">
+              <img src="img/icon/pay.svg" alt="" />
+              <a href="#">Способы оплаты</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div>
+          <p class="footer__title">Покупателям</p>
+          <div class="footer__buyers">
+            <a class="footer__link" href="#">Каталог</a>
+            <a class="footer__link" href="#">Акции</a>
+            <a class="footer__link" href="#">Бренды</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__title">О нас</p>
+          <div class="footer__about">
+            <a class="footer__link" href="#">О компании</a>
+            <a class="footer__link" href="#">Новости</a>
+            <a class="footer__link" href="#">Команда</a>
+          </div>
+        </div>
+        <div class="footer__subscribe">
+          <p class="footer__title">Узнайте первым о новинках и акциях</p>
+          <form class="footer__form" action="#">
+            <input
+              class="footer__mail-field"
+              type="email"
+              placeholder="Адрес электронной почты"
+            />
+            <button class="footer__btn" type="submit">Подписаться</button>
+          </form>
+        </div>
+      </div>
     </div>
-    <div class="popUp"></div>
-</body>
+    <div class="popUp" hidden>
+      <form class="popUp__form" action="#">
+        <div class="popUp__top">
+          <div class="popUp__icon">
+            <img src="img/icon/close_black.svg" alt="" />
+          </div>
+
+          <p class="popUp__title">Купить в один клик</p>
+          <div class="popUp__input-group">
+            <input
+              class="popUp__field"
+              type="tel"
+              placeholder="+ 7 (---) --- -- -- "
+            />
+            <input class="popUp__field" type="text" placeholder="Ваше имя" />
+          </div>
+        </div>
+        <div class="popUp__bottom">
+          <p class="popUp__text-adree">
+            Нажимая кнопку “Отправить”, я даю согласие на обработку моих
+            персональных данных в соответствии с
+            <a href="#">Условиями конфиденциальности</a>
+          </p>
+          <button class="popUp__btn" type="submit">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
